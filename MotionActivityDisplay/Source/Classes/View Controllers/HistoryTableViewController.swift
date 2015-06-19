@@ -16,9 +16,19 @@ class HistoryTableViewController: UITableViewController {
         super.init(nibName: nil, bundle: nil)
 
         title = "History"
+
+        let closeButton = UIBarButtonItem(title: "Close", style: .Plain, target: self, action: "close:")
+        navigationItem.leftBarButtonItem = closeButton
     }
 
     required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
+    }
+
+    //MARK: Button Actions
+
+    @objc
+    private func close(sender: AnyObject) {
+        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
