@@ -14,9 +14,19 @@ class MotionActivityViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
+
+        let historyButton = UIBarButtonItem(title: "History", style: .Plain, target: self, action: "showHistory:")
+        navigationItem.leftBarButtonItem = historyButton
     }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+
+    //MARK: Button Actions
+
+    @objc
+    private func showHistory(sender: AnyObject) {
+
     }
 }
