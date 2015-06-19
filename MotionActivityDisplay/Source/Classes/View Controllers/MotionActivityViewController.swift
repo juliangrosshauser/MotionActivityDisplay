@@ -11,6 +11,10 @@ import CoreMotion
 
 class MotionActivityViewController: UIViewController {
 
+    //MARK: Properties
+
+    private let motionActivityManager = CMMotionActivityManager()
+
     //MARK: Initialization
 
     init() {
