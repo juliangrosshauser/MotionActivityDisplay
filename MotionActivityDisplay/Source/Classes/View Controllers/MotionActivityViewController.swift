@@ -27,6 +27,6 @@ class MotionActivityViewController: UIViewController {
 
     @objc
     private func showHistory(sender: AnyObject) {
-
+        presentViewController(UINavigationController(rootViewController: HistoryTableViewController()), animated: true, completion: nil)
     }
 }
