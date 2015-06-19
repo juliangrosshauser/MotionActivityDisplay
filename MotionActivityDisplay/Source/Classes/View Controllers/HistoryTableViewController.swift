@@ -14,6 +14,8 @@ class HistoryTableViewController: UITableViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
+
+        title = "History"
     }
 
     required init(coder aDecoder: NSCoder!) {
