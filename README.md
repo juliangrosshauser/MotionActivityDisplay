@@ -4,5 +4,9 @@
 
 MotionActivityDisplay for iOS
 
+MotionActivityDisplay shows, as the name suggests, the current [`CMMotionActivity`](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMMotionActivity_class/index.html#//apple_ref/occ/cl/CMMotionActivity) type(s) (stationary, walking, running, etc.).
+
+It also provides a history of [`CMMotionActivity`](https://developer.apple.com/library/ios/documentation/CoreMotion/Reference/CMMotionActivity_class/index.html#//apple_ref/occ/cl/CMMotionActivity) types.
+
 ## License
 [MIT](LICENSE)
