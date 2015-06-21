@@ -1,0 +1,7 @@
+[
+  "-project", "MotionActivityDisplay.xcodeproj",
+  "-scheme", "MotionActivityDisplay",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
