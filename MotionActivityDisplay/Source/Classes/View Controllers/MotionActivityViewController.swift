@@ -20,6 +20,12 @@ class MotionActivityViewController: UIViewController {
 
         titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
 
+        if CMMotionActivityManager.isActivityAvailable() {
+            titleLabel.text = "Current motion type:"
+        } else {
+            titleLabel.text = "Motion data isn't available on this device"
+        }
+
         return titleLabel
     }()
 
