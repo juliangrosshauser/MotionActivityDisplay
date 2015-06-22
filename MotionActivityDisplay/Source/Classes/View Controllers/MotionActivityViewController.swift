@@ -20,7 +20,7 @@ class MotionActivityViewController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
 
-        if (CMMotionActivityManager.isActivityAvailable()) {
+        if CMMotionActivityManager.isActivityAvailable() {
             let historyButton = UIBarButtonItem(title: "History", style: .Plain, target: self, action: "showHistory:")
             navigationItem.leftBarButtonItem = historyButton
         }
