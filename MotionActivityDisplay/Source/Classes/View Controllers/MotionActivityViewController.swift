@@ -54,11 +54,15 @@ class MotionActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         view.addSubview(titleLabel)
+        view.addSubview(motionTypeLabel)
 
         let verticalTitleConstraint = NSLayoutConstraint(item: titleLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 0.5, constant: 0)
         let horizontalTitleConstraint = NSLayoutConstraint(item: titleLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
 
-        view.addConstraints([verticalTitleConstraint, horizontalTitleConstraint])
+        let verticalMotionTypeConstraint = NSLayoutConstraint(item: motionTypeLabel, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0)
+        let horizontalMotionTypeConstraint = NSLayoutConstraint(item: motionTypeLabel, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0)
+
+        view.addConstraints([verticalTitleConstraint, horizontalTitleConstraint, verticalMotionTypeConstraint, horizontalMotionTypeConstraint])
     }
 
     //MARK: Button Actions
