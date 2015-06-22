@@ -23,6 +23,16 @@ class MotionActivityViewController: UIViewController {
         return titleLabel
     }()
 
+    private let motionTypeLabel: UILabel = {
+        let motionTypeLabel = UILabel()
+
+        motionTypeLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        motionTypeLabel.numberOfLines = 0
+        motionTypeLabel.textAlignment = .Center
+
+        return motionTypeLabel
+    }()
+
     //MARK: Initialization
 
     init() {
