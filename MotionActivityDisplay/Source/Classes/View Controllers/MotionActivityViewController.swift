@@ -71,6 +71,56 @@ class MotionActivityViewController: UIViewController {
         view.addConstraints([verticalTitleConstraint, horizontalTitleConstraint, verticalMotionTypeConstraint, horizontalMotionTypeConstraint])
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if CMMotionActivityManager.isActivityAvailable() {
+            let motionActivityHandler: CMMotionActivityHandler = { [unowned self] activity in
+                var motionType: String = ""
+
+                if activity.stationary {
+                    motionType += "stationary"
+                }
+
+                if activity.walking {
+                    if !motionType.isEmpty {
+                        motionType += "\n"
+                    }
+
+                    motionType += "walking"
+                }
+
+                if activity.automotive {
+                    if !motionType.isEmpty {
+                        motionType += "\n"
+                    }
+
+                    motionType += "automotive"
+                }
+
+                if activity.cycling {
+                    if !motionType.isEmpty {
+                        motionType += "\n"
+                    }
+
+                    motionType += "cycling"
+                }
+
+                if activity.unknown {
+                    if !motionType.isEmpty {
+                        motionType += "\n"
+                    }
+
+                    motionType += "unknown"
+                }
+
+                self.motionTypeLabel.text = motionType
+            }
+
+            motionActivityManager.startActivityUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: motionActivityHandler)
+        }
+    }
+
     //MARK: Button Actions
 
     @objc
