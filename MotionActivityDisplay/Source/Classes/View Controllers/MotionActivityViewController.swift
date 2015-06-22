@@ -15,6 +15,14 @@ class MotionActivityViewController: UIViewController {
 
     private let motionActivityManager = CMMotionActivityManager()
 
+    private let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+
+        titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+
+        return titleLabel
+    }()
+
     //MARK: Initialization
 
     init() {
