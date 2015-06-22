@@ -121,6 +121,14 @@ class MotionActivityViewController: UIViewController {
         }
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        if CMMotionActivityManager.isActivityAvailable() {
+            motionActivityManager.stopActivityUpdates()
+        }
+    }
+
     //MARK: Button Actions
 
     @objc
