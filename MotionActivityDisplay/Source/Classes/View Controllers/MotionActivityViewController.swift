@@ -90,6 +90,14 @@ class MotionActivityViewController: UIViewController {
                     motionType += "walking"
                 }
 
+                if activity.running {
+                    if !motionType.isEmpty {
+                        motionType += "\n"
+                    }
+
+                    motionType += "running"
+                }
+
                 if activity.automotive {
                     if !motionType.isEmpty {
                         motionType += "\n"
