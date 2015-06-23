@@ -122,15 +122,15 @@ class MotionActivityViewController: UIViewController {
                     motionType += "unknown"
                 }
 
-                if !motionType.isEmpty {
-                    motionType += "\n"
+                if motionType.isEmpty {
+                    motionType += "unidentified motion type"
                 }
 
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateStyle = .ShortStyle
                 dateFormatter.timeStyle = .ShortStyle
 
-                motionType += "Start date: \(dateFormatter.stringFromDate(activity.startDate))\n"
+                motionType += "\nStart date: \(dateFormatter.stringFromDate(activity.startDate))\n"
 
                 motionType += "Confidence: "
 
