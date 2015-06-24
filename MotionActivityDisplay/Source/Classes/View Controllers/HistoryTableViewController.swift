@@ -40,6 +40,14 @@ class HistoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if CMMotionActivityManager.isActivityAvailable() {
+            let now = NSDate()
+            let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            let lastWeekComponents = NSDateComponents()
+            lastWeekComponents.day = -7
+            let lastWeek = calendar.dateByAddingComponents(lastWeekComponents, toDate: now, options: .allZeros)!
+        }
     }
 
     //MARK: Button Actions
