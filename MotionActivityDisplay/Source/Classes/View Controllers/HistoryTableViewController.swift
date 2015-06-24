@@ -47,6 +47,12 @@ class HistoryTableViewController: UITableViewController {
             let lastWeekComponents = NSDateComponents()
             lastWeekComponents.day = -7
             let lastWeek = calendar.dateByAddingComponents(lastWeekComponents, toDate: now, options: .allZeros)!
+
+            let motionActivityQueryHandler: CMMotionActivityQueryHandler = { [unowned self] (activities: [AnyObject]!, error: NSError!) in
+                if let activities = activities as? [CMMotionActivity] where error == nil {
+                    self.activities = activities
+                }
+            }
         }
     }
 
