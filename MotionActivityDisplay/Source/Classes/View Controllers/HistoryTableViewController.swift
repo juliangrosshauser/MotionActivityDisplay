@@ -81,3 +81,24 @@ class HistoryTableViewController: UITableViewController {
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
+//MARK: UITableViewDataSource
+
+extension HistoryTableViewController: UITableViewDataSource {
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activities.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! HistoryTableViewCell
+
+        let activity = activities[indexPath.row]
+        let motionTypes = join(", ", activity.motionTypes)
+
+        cell.textLabel?.text = motionTypes
+        cell.detailTextLabel?.text = "\(activity.dateString), \(activity.confidenceString)"
+
+        return cell
+    }
+}
