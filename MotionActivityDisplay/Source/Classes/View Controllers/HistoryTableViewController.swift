@@ -55,6 +55,8 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.registerClass(HistoryTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+
         if CMMotionActivityManager.isActivityAvailable() {
             let now = NSDate()
             let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
