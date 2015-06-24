@@ -15,6 +15,12 @@ class HistoryTableViewController: UITableViewController {
 
     private let motionActivityManager = CMMotionActivityManager()
 
+    private var activities = [CMMotionActivity]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
     //MARK: Initialization
 
     init() {
