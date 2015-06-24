@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreMotion
 
 class HistoryTableViewController: UITableViewController {
+
+    //MARK: Properties
+
+    private let motionActivityManager = CMMotionActivityManager()
 
     //MARK: Initialization
 
