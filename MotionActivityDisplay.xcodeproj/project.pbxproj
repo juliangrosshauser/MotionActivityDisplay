@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B915519D1B34B977009A9C30 /* MotionActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915519C1B34B977009A9C30 /* MotionActivityViewController.swift */; };
 		B915519F1B34B9D8009A9C30 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915519E1B34B9D8009A9C30 /* HistoryTableViewController.swift */; };
+		B992E59A1B3B4A23008C50D1 /* CMMotionActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992E5991B3B4A23008C50D1 /* CMMotionActivity.swift */; };
 		B9E821491B3372B2006B915E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E821411B3372B2006B915E /* LaunchScreen.xib */; };
 		B9E8214A1B3372B2006B915E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E821431B3372B2006B915E /* Images.xcassets */; };
 		B9E8214C1B3372B2006B915E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E821481B3372B2006B915E /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		B915519C1B34B977009A9C30 /* MotionActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionActivityViewController.swift; path = "MotionActivityDisplay/Source/Classes/View Controllers/MotionActivityViewController.swift"; sourceTree = SOURCE_ROOT; };
 		B915519E1B34B9D8009A9C30 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewController.swift; path = "MotionActivityDisplay/Source/Classes/View Controllers/HistoryTableViewController.swift"; sourceTree = SOURCE_ROOT; };
+		B992E5991B3B4A23008C50D1 /* CMMotionActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMMotionActivity.swift; path = MotionActivityDisplay/Source/Extensions/CMMotionActivity.swift; sourceTree = SOURCE_ROOT; };
 		B9E8211A1B337213006B915E /* MotionActivityDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionActivityDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E8212F1B337213006B915E /* MotionActivityDisplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionActivityDisplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E821421B3372B2006B915E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -64,6 +66,15 @@
 			);
 			name = "View Controllers";
 			path = Application;
+			sourceTree = "<group>";
+		};
+		B992E5981B3B49ED008C50D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B992E5991B3B4A23008C50D1 /* CMMotionActivity.swift */,
+			);
+			name = Extensions;
+			path = Classes/Application;
 			sourceTree = "<group>";
 		};
 		B9E821111B337213006B915E = {
@@ -107,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E821461B3372B2006B915E /* Classes */,
+				B992E5981B3B49ED008C50D1 /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E8214C1B3372B2006B915E /* AppDelegate.swift in Sources */,
+				B992E59A1B3B4A23008C50D1 /* CMMotionActivity.swift in Sources */,
 				B915519D1B34B977009A9C30 /* MotionActivityViewController.swift in Sources */,
 				B915519F1B34B9D8009A9C30 /* HistoryTableViewController.swift in Sources */,
 			);
