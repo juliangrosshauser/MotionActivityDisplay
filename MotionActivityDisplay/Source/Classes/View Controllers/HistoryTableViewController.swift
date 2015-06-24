@@ -36,6 +36,12 @@ class HistoryTableViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
 
+    //MARK: UIViewController
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     //MARK: Button Actions
 
     @objc
