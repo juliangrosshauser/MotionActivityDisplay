@@ -27,6 +27,7 @@ class HistoryTableViewController: UITableViewController {
     //MARK: Properties
 
     private let motionActivityManager = CMMotionActivityManager()
+    private let cellIdentifier = "historyCell"
 
     private var activities = [CMMotionActivity]() {
         didSet {
