@@ -76,76 +76,9 @@ class MotionActivityViewController: UIViewController {
 
         if CMMotionActivityManager.isActivityAvailable() {
             let motionActivityHandler: CMMotionActivityHandler = { [unowned self] activity in
-                var motionType: String = ""
+                let motionTypes = join("\n", activity.motionTypes)
 
-                if activity.stationary {
-                    motionType += "stationary"
-                }
-
-                if activity.walking {
-                    if !motionType.isEmpty {
-                        motionType += "\n"
-                    }
-
-                    motionType += "walking"
-                }
-
-                if activity.running {
-                    if !motionType.isEmpty {
-                        motionType += "\n"
-                    }
-
-                    motionType += "running"
-                }
-
-                if activity.automotive {
-                    if !motionType.isEmpty {
-                        motionType += "\n"
-                    }
-
-                    motionType += "automotive"
-                }
-
-                if activity.cycling {
-                    if !motionType.isEmpty {
-                        motionType += "\n"
-                    }
-
-                    motionType += "cycling"
-                }
-
-                if activity.unknown {
-                    if !motionType.isEmpty {
-                        motionType += "\n"
-                    }
-
-                    motionType += "unknown"
-                }
-
-                if motionType.isEmpty {
-                    motionType += "unidentified motion type"
-                }
-
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateStyle = .ShortStyle
-                dateFormatter.timeStyle = .ShortStyle
-
-                motionType += "\nStart date: \(dateFormatter.stringFromDate(activity.startDate))\n"
-
-                motionType += "Confidence: "
-
-                switch activity.confidence {
-                    case .Low:
-                        motionType += "Low"
-
-                    case .Medium:
-                        motionType += "Medium"
-
-                    case .High:
-                        motionType += "High"
-                }
-
-                self.motionTypeLabel.text = motionType
+                self.motionTypeLabel.text = "\(motionTypes)\n\(activity.dateString)\n\(activity.confidenceString)"
             }
 
             motionActivityManager.startActivityUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: motionActivityHandler)
