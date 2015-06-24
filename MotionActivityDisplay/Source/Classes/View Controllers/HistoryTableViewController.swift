@@ -9,6 +9,19 @@
 import UIKit
 import CoreMotion
 
+class HistoryTableViewCell: UITableViewCell {
+
+    //MARK: Initialization
+
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}
+
 class HistoryTableViewController: UITableViewController {
 
     //MARK: Properties
