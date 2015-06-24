@@ -53,6 +53,8 @@ class HistoryTableViewController: UITableViewController {
                     self.activities = activities
                 }
             }
+
+            motionActivityManager.queryActivityStartingFromDate(lastWeek, toDate: now, toQueue: NSOperationQueue.mainQueue(), withHandler: motionActivityQueryHandler)
         }
     }
 
