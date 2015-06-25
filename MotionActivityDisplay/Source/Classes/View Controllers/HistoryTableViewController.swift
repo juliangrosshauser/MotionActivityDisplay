@@ -95,7 +95,7 @@ extension HistoryTableViewController: UITableViewDataSource {
         let motionTypes = join(", ", activity.motionTypes)
 
         cell.textLabel?.text = motionTypes
-        cell.detailTextLabel?.text = "\(activity.printableDate), \(activity.confidenceString)"
+        cell.detailTextLabel?.text = "\(activity.printableDate), \(activity.printableConfidence)"
 
         return cell
     }

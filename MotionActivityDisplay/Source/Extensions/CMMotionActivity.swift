@@ -54,20 +54,20 @@ extension CMMotionActivity {
         return "Start date: \(dateFormatter.stringFromDate(self.startDate))"
     }
 
-    var confidenceString: String {
-        var confidenceString = "Confidence: "
+    var printableConfidence: String {
+        var printableConfidence = "Confidence: "
 
         switch self.confidence {
             case .Low:
-                confidenceString += "Low"
+                printableConfidence += "Low"
 
             case .Medium:
-                confidenceString += "Medium"
+                printableConfidence += "Medium"
 
             case .High:
-                confidenceString += "High"
+                printableConfidence += "High"
         }
 
-        return confidenceString
+        return printableConfidence
     }
 }
