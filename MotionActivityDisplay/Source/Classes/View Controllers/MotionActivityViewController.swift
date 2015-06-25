@@ -78,7 +78,7 @@ class MotionActivityViewController: UIViewController {
             let motionActivityHandler: CMMotionActivityHandler = { [unowned self] activity in
                 let motionTypes = join("\n", activity.motionTypes)
 
-                self.motionTypeLabel.text = "\(motionTypes)\n\(activity.dateString)\n\(activity.confidenceString)"
+                self.motionTypeLabel.text = "\(motionTypes)\n\(activity.printableDate)\n\(activity.confidenceString)"
             }
 
             motionActivityManager.startActivityUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: motionActivityHandler)

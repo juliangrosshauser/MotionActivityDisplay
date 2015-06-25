@@ -46,7 +46,7 @@ extension CMMotionActivity {
         return motionTypes
     }
 
-    var dateString: String {
+    var printableDate: String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .ShortStyle
         dateFormatter.timeStyle = .ShortStyle
