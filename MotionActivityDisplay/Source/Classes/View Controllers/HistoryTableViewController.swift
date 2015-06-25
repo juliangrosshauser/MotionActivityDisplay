@@ -61,7 +61,7 @@ class HistoryTableViewController: UITableViewController {
             let now = NSDate()
             let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
             let lastWeekComponents = NSDateComponents()
-            lastWeekComponents.day = -7
+            lastWeekComponents.day = -1
             let lastWeek = calendar.dateByAddingComponents(lastWeekComponents, toDate: now, options: .allZeros)!
 
             let motionActivityQueryHandler: CMMotionActivityQueryHandler = { [unowned self] (activities: [AnyObject]!, error: NSError!) in
