@@ -9,6 +9,12 @@
 import UIKit
 import CoreMotion
 
+//MARK: NSDate Operators
+
+func > (lhs: NSDate, rhs: NSDate) -> Bool {
+    return lhs.compare(rhs) == .OrderedDescending
+}
+
 class HistoryTableViewCell: UITableViewCell {
 
     //MARK: Initialization
