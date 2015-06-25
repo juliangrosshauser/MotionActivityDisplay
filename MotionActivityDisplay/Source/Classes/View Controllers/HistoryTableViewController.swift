@@ -70,7 +70,7 @@ class HistoryTableViewController: UITableViewController {
 
             let motionActivityQueryHandler: CMMotionActivityQueryHandler = { [unowned self] (activities: [AnyObject]!, error: NSError!) in
                 if let activities = activities as? [CMMotionActivity] where error == nil {
-                    self.activities = activities
+                    self.activities = activities.sorted { $0.startDate > $1.startDate }
                 }
             }
 
