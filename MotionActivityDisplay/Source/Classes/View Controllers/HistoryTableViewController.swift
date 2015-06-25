@@ -60,9 +60,7 @@ class HistoryTableViewController: UITableViewController {
         if CMMotionActivityManager.isActivityAvailable() {
             let now = NSDate()
             let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-            let lastWeekComponents = NSDateComponents()
-            lastWeekComponents.day = -1
-            let lastWeek = calendar.dateByAddingComponents(lastWeekComponents, toDate: now, options: .allZeros)!
+            let lastWeek = calendar.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: now, options: .allZeros)
 
             let motionActivityQueryHandler: CMMotionActivityQueryHandler = { [unowned self] (activities: [AnyObject]!, error: NSError!) in
                 if let activities = activities as? [CMMotionActivity] where error == nil {
